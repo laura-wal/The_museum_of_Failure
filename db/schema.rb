@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150608105249) do
+ActiveRecord::Schema.define(version: 20150608113331) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "final_art_tags", force: :cascade do |t|
-    t.string   "final_art_id"
-    t.string   "tag_id"
+    t.integer  "final_art_id"
+    t.integer  "tag_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
@@ -32,14 +32,14 @@ ActiveRecord::Schema.define(version: 20150608105249) do
   end
 
   create_table "tags", force: :cascade do |t|
-    t.boolean  "life"
-    t.boolean  "love"
-    t.boolean  "epic"
-    t.boolean  "work"
-    t.boolean  "funny"
+    t.boolean  "life",         default: false
+    t.boolean  "love",         default: false
+    t.boolean  "epic",         default: false
+    t.boolean  "work",         default: false
+    t.boolean  "funny",        default: false
     t.integer  "final_art_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
 end
