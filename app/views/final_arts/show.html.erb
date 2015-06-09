@@ -1,4 +1,21 @@
-<h1>testshow</h1>
+
+  <div class="final-image">
+    <div class="show-image">
+      <ul><%= @finalart.comment  %></ul>
+      <%=image_tag(@finalart.img_url, class: '.final-image') %>
+    </div>
+  </div>
+
+<!--  <%#= @tag.name %> -->
+
+<%#= link_to "Add a Tag", new_final_art_tag(@finalarts)  %>
+
+<!-- dont know how to display the tags, as i need the tag to correspond soley to the art id.
+
+the link was working and now it has broke as it says undefined method.final_art_tag
+
+cant center the image and dont know why...
 
 
-<%= link_to "add tags", new_final_art_tag_path(@finalart) %>
+
+ -->

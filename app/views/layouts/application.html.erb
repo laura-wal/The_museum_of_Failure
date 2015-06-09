@@ -8,12 +8,22 @@
   <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 </head>
 <body>
- <%= link_to 'The Musuem of Failure', final_arts_path %>
- <form id="search">
-  <input type="search" id="search-keyword">
-  <input type="submit" value="Submit">
- </form>
-<%= yield %>
-
+<div class="content-wrapper"
+    <nav>
+      <div class="title">
+        <p><%= link_to 'The Musuem of Failure', final_arts_path %></p>
+      </div>
+      <form id="search">
+        <input type="search" id="search-keyword">
+        <input type="submit" value="Submit">
+      </form>
+    </nav>
+    <%= yield %>
+</div>
+  <footer>
+    <div class="create-button">
+      <h3> <%= link_to 'Make Some Art!', new_final_art_path %></h3>
+    </div>
+  </footer>
 </body>
 </html>

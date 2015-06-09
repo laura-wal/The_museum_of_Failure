@@ -1,29 +1,78 @@
 .Newbutton {
-  font: 'Quicksand', sans-serif;
-  font-size: 14px;
   text-align: center;
   display: inline-block;
   position: fixed;
+  h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-style: bold;
+    text-decoration: bold;
+  }
 }
 
-nav {
-  font-size: 20px;
+.title, a {
   display: inline-block;
+  width: 100%;
+
+  p, a {
+    font-weight: bold;
+    font-size: 20px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+  }
+
+}
+
+.content-wrapper{
+  // height: 10000px
+}
+
+.create-button, a {
   text-align: center;
+  display: inline-block;
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  position: relative
+  ;
+  // height: 50px;
+
+}
+
+#search {
+  margin-right: 20px;
+  float: right;
 }
 
 html, body { 
-  min-width: 200%;
-  min-height: 200%;
+  min-width: 100%;
+  min-height: 100%;
+  font-family: 'Quicksand', sans-serif;
 }
 
+.grid-item {
+  float: left;
+  width: 400px;
+  margin: 40px;
+}
+
+.show-image {
+  display: inline-block;
+  img {
+   
+  }
+}
 
 .final-image {
-  width: 200px;
+  width: 350px;
   float: left;
   overflow: hidden;
   color: white;
-  margin: 40px;
+  margin: 10px;
 
   img {
     position: relative;
@@ -32,5 +81,8 @@ html, body {
   ul {
     z-index: 1;
     position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
   }
 }

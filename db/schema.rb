@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150608113331) do
+ActiveRecord::Schema.define(version: 20150609154143) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,14 +32,9 @@ ActiveRecord::Schema.define(version: 20150608113331) do
   end
 
   create_table "tags", force: :cascade do |t|
-    t.boolean  "life",         default: false
-    t.boolean  "love",         default: false
-    t.boolean  "epic",         default: false
-    t.boolean  "work",         default: false
-    t.boolean  "funny",        default: false
-    t.integer  "final_art_id"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

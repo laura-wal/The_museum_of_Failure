@@ -17,6 +17,7 @@ class FinalArtsController < ApplicationController
 
   def show
     @finalart = FinalArt.find(params[:id])
+    # @tag = Tag.find(params[:id])
   end
 
   def update
@@ -24,7 +25,7 @@ class FinalArtsController < ApplicationController
 
   private
   def final_art_params
-    params.required(:final_art).permit(:name, :comment)
+    params.require(:final_art).permit(:name, :comment)
   end
 
 end
