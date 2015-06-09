@@ -1,0 +1,16 @@
+<%= form_for [@finalart, @tag] do |form| %>
+
+<%= check_box_tag(:life) %>
+<%= label_tag(:life, 'Life Fail?') %>
+<%= check_box_tag(:love) %>
+<%= label_tag(:love, 'Love Fail?') %>
+<%= check_box_tag(:epic) %>
+<%= label_tag(:epic, 'Epic Fail?') %>
+<%= check_box_tag(:work) %>
+<%= label_tag(:work, 'Work Fail?') %>
+<%= check_box_tag(:funny) %>
+<%= label_tag(:funny, 'Funny Fail?') %>
+<%= form.submit 'Submit' %>
+
+
+<% end %>

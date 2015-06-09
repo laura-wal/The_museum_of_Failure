@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'final_arts#index'
-  resources :final_arts
+  resources :final_arts do
+    resources :tags
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

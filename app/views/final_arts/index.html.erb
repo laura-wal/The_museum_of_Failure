@@ -1,1 +1,13 @@
-<h1>i work!</h1>
+<div class= "Newbutton"></div>
+  <%= link_to 'Make Some Art!', new_final_art_path %>
+</div>
+<div class="grid">
+  <% @finalarts.each do |finalart| %>
+    <div class="final-image">
+      <div class="grid-item">
+      <ul><%= finalart.comment  %></ul>
+      <%= link_to image_tag(finalart.img_url), finalart  %>
+      </div>
+    </div>
+ </div> 
+<% end %>

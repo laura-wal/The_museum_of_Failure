@@ -1,0 +1,36 @@
+.Newbutton {
+  font: 'Quicksand', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+  position: fixed;
+}
+
+nav {
+  font-size: 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+html, body { 
+  min-width: 200%;
+  min-height: 200%;
+}
+
+
+.final-image {
+  width: 200px;
+  float: left;
+  overflow: hidden;
+  color: white;
+  margin: 40px;
+
+  img {
+    position: relative;
+    width: 100%;
+  }
+  ul {
+    z-index: 1;
+    position: absolute;
+  }
+}
