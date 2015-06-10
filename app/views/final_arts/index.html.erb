@@ -1,21 +1,25 @@
-<div class= "Newbutton">
-</div>
-
+<div class= "Newbutton"></div>
 
 <%= search_form_for @q do |f|  %>
-<%= f.label :Search %>
-<%= f.search_field :name  %>
-<% f.submit %>
+  <%= f.label :Search %>
+  <%= f.search_field :name  %>
+  <% f.submit %>
 <% end %>
-
 
 <div class="grid">
+
   <% @finalarts.each do |finalart| %>
+    <a href="<%= final_art_path(finalart) %>">
     <div class="final-image">
-      <div class="grid-item">
-      <ul><%= finalart.comment  %></ul>
-      <%= link_to image_tag(finalart.img_url), finalart  %>
+      <%#= link_to , finalart %>
+      <%=  image_tag(finalart.img_url) %>
+      <div class="final-image-content">
+        <ul>
+            <li><%= finalart.comment %></li>
+        </ul>
       </div>
     </div>
- </div> 
-<% end %>
+    </a>
+  <% end %>
+</div> 
+

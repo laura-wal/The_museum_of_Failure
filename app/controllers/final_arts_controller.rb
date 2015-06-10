@@ -1,6 +1,7 @@
 class FinalArtsController < ApplicationController
   def index
     @finalarts = FinalArt.all
+    #search ransack - how do i 
     @q = FinalArt.ransack(params[:q])
     @finalarts = @q.result(distinct:true)
   end

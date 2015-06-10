@@ -8,14 +8,14 @@
   <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<div class="content-wrapper"
+  <div class="content-wrapper"
     <nav>
       <div class="title">
         <p><%= link_to 'The Musuem of Failure', final_arts_path %></p>
       </div>
     </nav>
-    <%= yield %>
-</div>
+      <%= yield %>
+  </div>
   <footer>
     <div class="create-button">
       <h3> <%= link_to 'Make Some Art!', new_final_art_path %></h3>

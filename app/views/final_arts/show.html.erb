@@ -2,7 +2,7 @@
   <div class="final-image">
     <div class="show-image">
       <ul><%= @finalart.comment  %></ul>
-      <%=image_tag(@finalart.img_url, class: '.final-image') %>
+      <%= link_to image_tag(@finalart.img_url, class: '.final-image') %>
     </div>
   </div>
 
@@ -11,6 +11,8 @@
  <% end %>
 
 <%= link_to "Add a Tag", new_final_art_tag_path(@finalart)  %>
+
+
 
 <!-- dont know how to display the tags, as i need the tag to correspond soley to the art id.
 
