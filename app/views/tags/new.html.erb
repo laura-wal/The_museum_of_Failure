@@ -1,5 +1,13 @@
+<h1>Add a tag</h1>
+
+<div class="final-image">
+    <div class="show-image">
+      <ul><%= @finalart.comment  %></ul>
+      <%=image_tag(@finalart.img_url, class: '.final-image') %>
+    </div>
+  </div>
+
 <%= form_for [@finalart, @tag] do |form| %>
-  
   <%= form.label :name %>
   <%= form.text_field :name %>
 

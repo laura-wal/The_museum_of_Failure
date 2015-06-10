@@ -24,11 +24,11 @@ r5 = Tag.create(name: 'frothy')
 
 #Add a rating to a fine_art
 
-f1.final_art_tags.create(tag_id: r1.id)
-f1.final_art_tags.create(tag_id: r4.id)
-f1.final_art_tags.create(tag_id: r5.id)
-f2.final_art_tags.create(tag_id: r2.id)
-f3.final_art_tags.create(tag_id: r3.id)
+f1.tags << r1
+f1.tags << r2
+f1.tags << r3
+f2.tags << r4
+f3.tags << r5
 
 
 

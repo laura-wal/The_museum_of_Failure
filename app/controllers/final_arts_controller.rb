@@ -1,6 +1,8 @@
 class FinalArtsController < ApplicationController
   def index
     @finalarts = FinalArt.all
+    @q = FinalArt.ransack(params[:q])
+    @finalarts = @q.result(distinct:true)
   end
 
   def new
@@ -17,7 +19,7 @@ class FinalArtsController < ApplicationController
 
   def show
     @finalart = FinalArt.find(params[:id])
-    # @tag = Tag.find(params[:id])
+    @tags = @finalart.tags
   end
 
   def update

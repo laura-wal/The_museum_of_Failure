@@ -1,6 +1,14 @@
 <div class= "Newbutton">
- 
 </div>
+
+
+<%= search_form_for @q do |f|  %>
+<%= f.label :Search %>
+<%= f.search_field :name  %>
+<% f.submit %>
+<% end %>
+
+
 <div class="grid">
   <% @finalarts.each do |finalart| %>
     <div class="final-image">

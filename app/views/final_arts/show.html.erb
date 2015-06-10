@@ -6,9 +6,11 @@
     </div>
   </div>
 
-<!--  <%#= @tag.name %> -->
+ <% @tags.each do |tag| %>
+ <%= tag.name %>
+ <% end %>
 
-<%#= link_to "Add a Tag", new_final_art_tag(@finalarts)  %>
+<%= link_to "Add a Tag", new_final_art_tag_path(@finalart)  %>
 
 <!-- dont know how to display the tags, as i need the tag to correspond soley to the art id.
 
