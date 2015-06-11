@@ -1,7 +1,6 @@
 class TagsController < ApplicationController
 
   def new
-
     @finalart = FinalArt.find(params[:final_art_id])
     # @tag = Tag.new(:finalart=>@finalart)
     @tag = Tag.new(params[:id])
@@ -9,14 +8,13 @@ class TagsController < ApplicationController
 
   def create
     @finalart = FinalArt.find(params[:final_art_id])
-    @tag = Tag.new(name: params[:tag][:name])
+    @tag = Tag.find_or_create_by!(name: params[:tag][:name])
     @finalart.tags << @tag
     redirect_to(final_art_path(id: @finalart.id))
   end
 
   def search
-  index
-  render :index
+    @results = FinalArt.ransack(params[:q]).result
   end
 
 #cant figure out how to make my create page work -  

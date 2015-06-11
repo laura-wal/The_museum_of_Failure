@@ -1,13 +1,13 @@
 <div class= "newbutton"></div>
 
-<%= search_form_for @q, url: final_art_tag_path(:id),
-                        html: {method: :get} do |f|  %>
-  <%= f.label :Search %>
-  <%= f.search_field :name  %>
-  <% f.submit %>
-<% end %>
+<%#= search_form_for @q, url: search_tags_path, html: {method: :get} do |form| %>
+  <%#= form.label :tags_name_matches, 'Search Tags' %>
+  <%#= form.search_field :tags_name_matches %>
 
-<div class="grid">
+  <%#= form.submit "search" %>
+<%# end %>
+
+<div class="grid" id="final-arts">
 
   <% @finalarts.each do |finalart| %>
   <a href="<%= final_art_path(finalart) %>">

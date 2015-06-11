@@ -7,12 +7,14 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'final_arts#index'
   resources :final_arts do
-    resources :tags do 
-      collection do
-        match 'search' => 'tag#search', via: [:get, :post], as: :search
-      end
-    end
+    resources :tags #do 
+      # collection do
+      #   match 'search' => 'tag#search', via: [:get, :post], as: :search
+      # end
+    # end
   end
+
+  get 'search_tags' => 'tags#search', as: 'search_tags'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 FinalArt.delete_all
+FinalArtTag.delete_all
 Tag.delete_all
 
 
@@ -28,6 +29,7 @@ f1.tags << r1
 f1.tags << r2
 f1.tags << r3
 f2.tags << r4
+f3.tags << r4
 f3.tags << r5
 
 

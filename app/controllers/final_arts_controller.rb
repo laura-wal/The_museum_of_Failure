@@ -1,9 +1,7 @@
 class FinalArtsController < ApplicationController
   def index
     @finalarts = FinalArt.all
-    #search ransack - how do i 
-    @q = FinalArt.ransack(params[:q])
-    @finalarts = @q.result(distinct:true)
+    @q = FinalArt.ransack
   end
 
   def new
@@ -13,8 +11,9 @@ class FinalArtsController < ApplicationController
   def create
     # final_art_params is the information from the form
     # @finalart = FinalArt.new(final_art_params)
-    @finalart = FinalArt.create(final_art_params)
     # @finalart.save
+    @finalart = FinalArt.create(final_art_params)
+   
     redirect_to(final_arts_path)
   end
 
