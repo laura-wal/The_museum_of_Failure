@@ -1,18 +1,16 @@
 $(function(){
-  var $elements = $('.grid');
-  $elements.masonry({
-    itemSelector: '.final-image'
+  var imgLoad = imagesLoaded($('.grid'));
+  var $container = $('.grid');
+  imgLoad.on( 'done', function(instance) {
+    console.log('DONE  - all images have been successfully loaded');
+    $container.masonry({
+      itemSelector: '.final-image'
+    });
+    $('.final-image-content p').slabText();
+    // $.each($container, function(index, image) {
+    //   $(image).find('.final-image-content p').slabText();
+    // })
   });
-
-  
-  // // Take each of the final-images
-  // $('.final-images ul').each(function() {
-  //   // Text and count the number of characters
-  //   var textlength = $("li").val().length;
-  //     // Add a css property of font-size / number of characters
-  //    (265 / textlength) * 8
-  //     = fontsize
-  // });
-})
+});
 
 

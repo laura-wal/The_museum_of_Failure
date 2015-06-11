@@ -1,6 +1,7 @@
-<div class= "Newbutton"></div>
+<div class= "newbutton"></div>
 
-<%= search_form_for @q do |f|  %>
+<%= search_form_for @q, url: final_art_tag_path(:id),
+                        html: {method: :get} do |f|  %>
   <%= f.label :Search %>
   <%= f.search_field :name  %>
   <% f.submit %>
@@ -9,17 +10,15 @@
 <div class="grid">
 
   <% @finalarts.each do |finalart| %>
-    <a href="<%= final_art_path(finalart) %>">
+  <a href="<%= final_art_path(finalart) %>">
     <div class="final-image">
-      <%#= link_to , finalart %>
       <%=  image_tag(finalart.img_url) %>
-      <div class="final-image-content">
-        <ul>
-            <li><%= finalart.comment %></li>
-        </ul>
-      </div>
+        <div class="final-image-content">
+          <p><%= finalart.comment %></p>
+        </div>
     </div>
     </a>
   <% end %>
+  
 </div> 
 

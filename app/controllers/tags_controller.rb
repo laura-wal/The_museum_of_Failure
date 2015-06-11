@@ -14,6 +14,11 @@ class TagsController < ApplicationController
     redirect_to(final_art_path(id: @finalart.id))
   end
 
+  def search
+  index
+  render :index
+  end
+
 #cant figure out how to make my create page work -  
 #hot do i add the new tags to the image?
 

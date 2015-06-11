@@ -19,9 +19,11 @@ class FinalArtsController < ApplicationController
   end
 
   def show
+    # @finalart = FinalArt.find(params[:q])
     @finalart = FinalArt.find(params[:id])
     @tags = @finalart.tags
   end
+
 
   def update
   end
