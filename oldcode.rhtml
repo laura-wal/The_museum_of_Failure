@@ -1,0 +1,11 @@
+<% @finalarts.each do |finalart| %>
+  <a href="<%= final_art_path(finalart) %>">
+    <div class="final-image">
+      <%=  image_tag(finalart.img_url) %>
+        <div class="final-image-content">
+          <p><%= finalart.comment %></p>
+        </div>
+    </div>
+    </a>
+  <% end %>
+</div> 

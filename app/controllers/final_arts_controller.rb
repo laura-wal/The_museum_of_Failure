@@ -2,6 +2,11 @@ class FinalArtsController < ApplicationController
   def index
     @finalarts = FinalArt.all
     @q = FinalArt.ransack
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @finalarts.to_json(include: :tags), status: 200 }
+    end
   end
 
   def new

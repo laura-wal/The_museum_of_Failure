@@ -1,4 +1,4 @@
-<div class= "newbutton"></div>
+
 
 <%#= search_form_for @q, url: search_tags_path, html: {method: :get} do |form| %>
   <%#= form.label :tags_name_matches, 'Search Tags' %>
@@ -6,19 +6,20 @@
 
   <%#= form.submit "search" %>
 <%# end %>
-
+<form>
+  <p>Search <input type="text" id="searchBox" /></p>
+</form>
 <div class="grid" id="final-arts">
 
-  <% @finalarts.each do |finalart| %>
-  <a href="<%= final_art_path(finalart) %>">
-    <div class="final-image">
-      <%=  image_tag(finalart.img_url) %>
-        <div class="final-image-content">
-          <p><%= finalart.comment %></p>
-        </div>
-    </div>
-    </a>
-  <% end %>
-  
 </div> 
 
+<script id="final-art-template" type="text/html">
+  <a href="/final_arts/{{= id }}">
+    <div class="final-image">
+      <img src="{{= img_url }}">
+        <div class="final-image-content">
+          <p>{{= comment }}</p>
+        </div>
+    </div>
+  </a>
+</script>

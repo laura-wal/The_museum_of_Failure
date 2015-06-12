@@ -1,30 +1,51 @@
-.newbutton {
-  text-align: center;
-  display: inline-block;
-  position: fixed;
-  h3 {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 20px;
-    font-style: bold;
-    text-decoration: bold;
-  }
-}
+// .newbutton {
+//   text-align: center;
+//   display: inline-block;
+//   position: fixed;
+//   h3 {
+//     font-family: 'Quicksand', sans-serif;
+//     font-size: 20px;
+//     font-style: bold;
+//     text-decoration: bold;
+//   }
+// }
 
 .title, a {
   display: block;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  z-index: 40;
 
-  p, a {
+  &p, &a {
     font-weight: bold;
     font-size: 20px;
     width: 70px;
     text-align: center;
     text-decoration: none;
     color: black;
-  }
+    z-index: 41;
 
+  }
+}
+
+.add-tag {
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 41;
+  color: #00FF00;
+}
+
+div.display-tags {
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 5;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
 .content-wrapper{
@@ -40,8 +61,9 @@
   font-weight: bold;
   font-size: 40px;
   text-decoration: none;
-  color: blue;
-  position: relative;
+  color: #00FF00;
+  z-index: 10;
+  // position: relative;
   // height: 50px;
 
 }
@@ -52,19 +74,17 @@
 }
 
 html, body { 
-  min-width: 100%;
-  min-height: 100%;
+  // min-width: 100%;
+  // min-height: 100%;
   font-family: 'Quicksand', sans-serif;
 }
 
 .show-image {
-  display: inline-block;
-  img {
-   
-  }
+  display: block;
 }
 
 .final-image {
+  // border: solid black 2px;
   max-width: 320px;
   width: 320px;
   box-sizing: border-box;
@@ -74,12 +94,16 @@ html, body {
   padding: 10px;
   text-align: center;
 
+
   img {
+    // border: solid black 2px;
     position: relative;
     width: 100%;
+    z-index: -10;
   }
 
   .final-image-content {
+    // border: solid black 2px;
     position: absolute;
     top: 20px;
     left: 20px;
@@ -91,9 +115,34 @@ html, body {
     text-transform: uppercase;
     line-height: 0.8;
     font-size: 200%;
-    font-weight: 700;
+    font-weight: 500;
     color: #00FF00;
     overflow: hidden;
-  }
-  
+  } 
 }
+
+// .final-image-content2 {
+//   // border: solid black 2px;
+//   width: 320px;
+//   color: #00FF00;
+//   overflow: hidden;
+//   justify-content: center;
+//     text-transform: uppercase;
+//     line-height: 0.8;
+//     font-size: 160%;
+//     font-weight: 700;
+//     align-items: center;
+//     justify-content: center;
+//     position: absolute;
+//     // top: 20px;
+//     // left: 20px;
+//     // right: 20px;
+//     // bottom: 20px;
+//     display: flex;
+// }
+
+
+
+
+
+

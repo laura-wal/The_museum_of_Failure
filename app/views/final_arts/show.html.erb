@@ -1,25 +1,27 @@
 
-  <div class="final-image">
-    <div class="show-image">
-      <ul><%= @finalart.comment  %></ul>
-      <%= link_to image_tag(@finalart.img_url, class: '.final-image') %>
-    </div>
-  </div>
+<div class="display-tags">
+   <% @tags.each do |tag| %>
+   <%= tag.name %>
+   <% end %>
+ </div>
 
- <% @tags.each do |tag| %>
- <%= tag.name %>
- <% end %>
-
-<%= link_to "Add a Tag", new_final_art_tag_path(@finalart)  %>
-
-
-
-<!-- dont know how to display the tags, as i need the tag to correspond soley to the art id.
-
-the link was working and now it has broke as it says undefined method.final_art_tag
-
-cant center the image and dont know why...
+<div class="grid" id="final-arts">
+  <a href="">
+    <div class="final-image">
+      <div class="show-image">  
+       <img><%= link_to image_tag(@finalart.img_url) %></img>
+          <div class="final-image-content">
+          <%= @finalart.comment  %>
+        </div>
+      </div>
+    </div>  
+  </a>  
+</div>  
 
 
 
- -->
+<div class="add-tag">
+  <%= link_to "Add a Tag", new_final_art_tag_path(@finalart)  %>
+</div>  
+
+
