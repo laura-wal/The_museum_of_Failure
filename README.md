@@ -3,7 +3,8 @@ The app allows a user to create a unique piece of artwork. There is currently so
 
 TECHNOLOGIES USED: Rails, Postgres, JQuery, Rijks Museum API, Sass, mansony.js, slabtext.js, filter.js, imagesload.js
 
-Installation:
+INSTALLATION:
+
 Run bundle install
 
 Then start your server with rails s 
